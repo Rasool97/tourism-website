@@ -1,0 +1,61 @@
+   @tailwind base;
+
+@layer base {
+    /* Vazir ***/
+@font-face {
+    font-family: Vazir;
+    font-style: normal;
+    font-weight: 600;
+    src: url("./fonts/Vazir-Bold-FD-WOL.woff") format("woff"), url("./fonts/Vazir-Bold-FD-WOL.woff2") format("woff2") , url("./fonts/Vazir-Bold-FD-WOL.ttf") format("ttf");
+}
+@font-face {
+    font-family: Vazir;
+    font-style: normal;
+    font-weight: 500;
+    src: url("./fonts/Vazir-Medium-FD-WOL.woff") format("woff"), url("./fonts/Vazir-Medium-FD-WOL.woff2") format("woff2") , url("./fonts/Vazir-Medium-FD-WOL.ttf") format("ttf");
+}
+@font-face {
+    font-family: Vazir;
+    font-style: normal;
+    font-weight: 400;
+    src: url("./fonts/Vazir-Light-FD-WOL.woff") format("woff"), url("./fonts/Vazir-Light-FD-WOL.woff2") format("woff2") , url("./fonts/Vazir-Light-FD-WOL.ttf") format("ttf");
+}
+body {
+    @apply  font-vazir;
+}
+}
+@tailwind components;
+@layer components {
+    .custom-border {
+        @apply border-gray-300 border-solid;
+    }
+    .flex-center {
+        @apply flex items-center justify-center;
+    }
+    .custom-transition {
+        @apply transition-all duration-300 ease-in;
+    }
+}
+
+@tailwind utilities;
+[x-cloak] {
+    display: none !important;
+}
+
+.top_swiper_container .top_swiper_next,
+.top_swiper_container .top_swiper_prev {
+    @apply hidden lg:flex w-8 h-16 bg-white bg-opacity-50 border border-gray-300 backdrop-blur-sm rounded-2xl;
+}
+
+.top_swiper_container .top_swiper_next {
+    @apply -right-3;
+}
+
+.top_swiper_container .top_swiper_prev {
+    @apply -left-3;
+}
+
+.top_swiper_container .top_swiper_next:after,
+.top_swiper_container .top_swiper_prev:after {
+    @apply text-lg font-bold text-gray-700;
+}
