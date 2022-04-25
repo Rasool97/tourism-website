@@ -32,6 +32,9 @@
        .custom-transition {
            @apply transition-all duration-300 ease-in;
        }
+       .scroll_fixed {
+           @apply h-full overflow-hidden
+       }
    }
    
    @tailwind utilities;

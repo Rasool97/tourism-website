@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin')
+
 module.exports = {
     content: ["./src/**/*.html"],
     theme: {
@@ -26,5 +28,8 @@ module.exports = {
     plugins: [
         require('@tailwindcss/line-clamp'),
         require('@tailwindcss/forms'),
+        plugin(function({ addVariant }) {
+            addVariant('label-checked', '&:checked ~ label')
+          })
     ],
 };
